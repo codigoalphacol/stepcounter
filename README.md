@@ -1,5 +1,5 @@
 # stepcount
-
+<img src="https://github.com/codigoalphacol/stepcounter/blob/master/assets/images/logostep.png/> 
 A new Flutter project.
 
 ## Getting Started
