@@ -73,6 +73,13 @@ packages:
       url: "https://github.com/MarkOSullivan94/dart_config.git"
     source: git
     version: "0.5.0"
+  decimal:
+    dependency: "direct main"
+    description:
+      name: decimal
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.3.3"
   flutter:
     dependency: "direct main"
     description: flutter
@@ -160,6 +167,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.0.1"
+  rational:
+    dependency: transitive
+    description:
+      name: rational
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.3.2"
   sky_engine:
     dependency: transitive
     description: flutter

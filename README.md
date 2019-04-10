@@ -1,7 +1,4 @@
-# stepcount
-![Codigo Alpha Flutter]
-
-![alt text](https://github.com/codigoalphacol/stepcounter/blob/master/assets/images/logostep.png) 
+# app_pasos
 
 A new Flutter project.
 

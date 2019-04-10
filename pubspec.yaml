@@ -1,4 +1,4 @@
-name: stepcount
+name: app_pasos
 description: A new Flutter project.
 
 version: 1.0.0+1
@@ -9,13 +9,13 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+
+  cupertino_icons: ^0.1.2
   font_awesome_flutter: ^8.4.0
+  decimal: ^0.3.3
   pedometer: ^0.0.5
   percent_indicator: ^1.0.14
   flutter_launcher_icons: ^0.7.0
-
-
-  cupertino_icons: ^0.1.2
 
 dev_dependencies:
   flutter_test:
@@ -32,5 +32,4 @@ flutter:
   uses-material-design: true
   assets:
         - assets/images/
-
 

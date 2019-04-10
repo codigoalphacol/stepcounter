@@ -60,7 +60,7 @@ class _MyAppState extends State<MyApp> {
 
     var long3 = (_numerox);
     long3 = num.parse(y.toStringAsFixed(2));
-    var long4 = (long3 / 10000);
+    var long4 = (long3/10000);
 
     int decimals = 1;
     int fac = pow(10, decimals);
@@ -128,58 +128,56 @@ class _MyAppState extends State<MyApp> {
           title: const Text('Step Counter app'),
           backgroundColor: Colors.black54,
         ),
-        body: new ListView(
-          padding: EdgeInsets.all(5.0),
-          children: <Widget>[
-            Container(
-              padding: EdgeInsets.only(top: 10.0),
-              width: 250, //ancho
-              height: 250, //largo tambien por numero height: 300
-              decoration: BoxDecoration(
-                  gradient: LinearGradient(
-                    begin: Alignment
-                        .bottomCenter, //cambia la iluminacion del degradado
-                    end: Alignment.topCenter,
-                    colors: [Color(0xFFA9F5F2), Color(0xFF01DFD7)],
-                  ),
-                  borderRadius: BorderRadius.only(
-                    bottomLeft: Radius.circular(27.0),
-                    bottomRight: Radius.circular(27.0),
-                    topLeft: Radius.circular(27.0),
-                    topRight: Radius.circular(27.0),
-                  )),
-                   child: new CircularPercentIndicator(
-                  radius: 200.0,
+        body: new Container(          
+          color: Colors.white24,
+          child: ListView(
+            padding: EdgeInsets.all(5.0),
+            children: <Widget>[
+              Container(
+                padding: EdgeInsets.only(top: 10.0),
+                width: 150, //ancho
+                height: 150, //largo tambien por numero height: 300
+                decoration: BoxDecoration(
+                    gradient: LinearGradient(
+                      begin: Alignment
+                          .bottomCenter, //cambia la iluminacion del degradado
+                      end: Alignment.topCenter,
+                      colors: [Color(0xFFA9F5F2), Color(0xFF01DFD7)],
+                    ),
+                    borderRadius: BorderRadius.only(
+                      bottomLeft: Radius.circular(27.0),
+                      bottomRight: Radius.circular(27.0),
+                      topLeft: Radius.circular(27.0),
+                      topRight: Radius.circular(27.0),
+                    )),
+                child: new CircularPercentIndicator(
+                  radius: 100.0,
                   lineWidth: 13.0,
                   animation: true,
-                  center: Container(
-                    child: new Row(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: <Widget>[
-                        Container(
-                          height: 50,
-                          width: 50,
-                          padding: EdgeInsets.only(left: 20.0),
-                          child: Icon(
-                            FontAwesomeIcons.walking,
-                            size: 30.0,
-                            color: Colors.white,
-                          ),
+                  center: new Row(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: <Widget>[
+                      Container(
+                        padding: EdgeInsets.only(left: 20.0),
+                        child: Icon(
+                          FontAwesomeIcons.walking,
+                          size: 30.0,
+                          color: Colors.white,
                         ),
-                        Container(
-                          //color: Colors.orange,
-                          child: Text(
-                            '$_stepCountValue',
-                            style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                fontSize: 20.0,
-                                color: Colors.purpleAccent),
-                          ),
-                          // height: 50.0,
-                          // width: 50.0,
+                      ),
+                      Container(
+                        //color: Colors.orange,
+                        child: Text(
+                          '$_stepCountValue',
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 20.0,
+                              color: Colors.purpleAccent),
                         ),
-                      ],
-                    ),
+                        // height: 50.0,
+                        // width: 50.0,
+                      ),
+                    ],
                   ),
                   percent: 0.217,
                   //percent: _convert,
@@ -193,11 +191,11 @@ class _MyAppState extends State<MyApp> {
                   circularStrokeCap: CircularStrokeCap.round,
                   progressColor: Colors.purpleAccent,
                 ),
-            ),
-             Divider(
-                height: 5.0,
               ),
-                            Container(
+              Divider(
+                height: 10,
+              ),
+              Container(
                 width: 80,
                 height: 100,
                 padding: EdgeInsets.only(left: 25.0, top: 10.0, bottom: 10.0),
@@ -270,6 +268,7 @@ class _MyAppState extends State<MyApp> {
               Divider(
                 height: 2,
               ),
+              //info data km, kcal, steps
               Container(
                 padding: EdgeInsets.only(top: 2.0),
                 width: 150, //ancho
@@ -313,7 +312,7 @@ class _MyAppState extends State<MyApp> {
                       ),
                     ),
                     VerticalDivider(
-                      width: 5.0,
+                      width: 20.0,
                     ),
                     new Container(
                       padding: EdgeInsets.only(left: 10.0),
@@ -334,7 +333,88 @@ class _MyAppState extends State<MyApp> {
                   ],
                 ),
               ),
-          ],
+              Divider(
+                height: 10,
+              ),
+              Container(
+                padding: EdgeInsets.only(left: 25.0, top: 10.0, bottom: 10.0),
+                color: Colors.black12,
+                child: Row(
+                  children: <Widget>[
+                    new Container(
+                      child: new Card(
+                        child: Container(
+                          height: 80.0,
+                          width: 80.0,
+                          decoration: BoxDecoration(
+                            image: DecorationImage(
+                              image: AssetImage("assets/images/barras.png"),
+                              fit: BoxFit.fitWidth,
+                              alignment: Alignment.topCenter,
+                            ),
+                          ),
+                        ),
+                        color: Colors.white54,
+                      ),
+                    ),
+                    VerticalDivider(
+                      width: 20.0,
+                    ),
+                    new Container(
+                      child: new Card(
+                        child: Container(
+                          height: 80.0,
+                          width: 80.0,
+                          decoration: BoxDecoration(
+                            image: DecorationImage(
+                              image: AssetImage("assets/images/water.png"),
+                              fit: BoxFit.fitWidth,
+                              alignment: Alignment.topCenter,
+                            ),
+                          ),
+                        ),
+                        color: Colors.transparent,
+                      ),
+                    ),
+                    VerticalDivider(
+                      width: 20.0,
+                    ),
+                    new Container(
+                      child: new Card(
+                        child: Container(
+                          height: 80.0,
+                          width: 80.0,
+                          decoration: BoxDecoration(
+                            image: DecorationImage(
+                              image: AssetImage("assets/images/heart.png"),
+                              fit: BoxFit.fitWidth,
+                              alignment: Alignment.topCenter,
+                            ),
+                          ),
+                        ),
+                        color: Colors.transparent,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Divider(
+                height: 10,
+              ),
+              Container(
+                padding: EdgeInsets.only(top: 2.0),
+                width: 200, //ancho
+                height: 100, //l
+                      decoration: BoxDecoration(
+                            image: DecorationImage(
+                              image: AssetImage("assets/images/codigoalpha.png"),
+                              fit: BoxFit.fitWidth,
+                              alignment: Alignment.topCenter,
+                            ),
+                          ),
+              ),
+            ],
+          ),
         ),
       ),
     );
